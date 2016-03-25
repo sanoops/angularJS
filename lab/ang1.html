@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+   
+   <head>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.17/angular.min.js"></script>
+   </head>
+   
+   <body ng-app = "myapp">
+      
+<!--       <div ng-controller = "HelloController" >
+         <h2>Welcome {{helloTo.title}} to the world of Tutorialspoint!</h2>
+         <h2>Welcome {{helloTo.subtitle}} to the world of Tutorialspoint!</h2>
+      </div> -->
+
+      <div ng-controller = "hicontroller" >
+         <h2>  this is me and name is {{hi.name}}</h2>
+         <h2>  this is me and address is {{hi.address}}</h2>
+      </div>
+      <div ng-controller = "newcontroller" >
+         <h2> this is my brother name was {{brother.name}}</h2>
+         <h2> this is my brother address was {{brother.address}}</h2>
+      </div>
+      
+      <script>
+         // angular.module("myapp", [])
+         // .controller("HelloController", function($scope) {
+         //    $scope.helloTo = {};
+         //    $scope.helloTo.title = "AngularJS";
+         //    $scope.helloTo.subtitle = "this is for testing";
+         // });
+
+      // another method with using different controller
+         app = angular.module("myapp",[])
+
+         app.controller("hicontroller", function($scope){
+            $scope.hi = {};
+            $scope.hi.name = "sanoop";
+            $scope.hi.address = "kunnath house";
+         });
+
+         app.controller("newcontroller", function($scope){
+            $scope.brother = {};
+            $scope.brother.name = "arjun";
+            $scope.brother.address = "kunnath house";
+         });
+
+
+
+      </script>
+      
+   </body>
+</html>
